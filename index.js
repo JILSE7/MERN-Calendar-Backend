@@ -3,12 +3,16 @@ const { dbConection } = require('./database/config');
 //variables de entorno
 require('dotenv').config();
 
+const cors = require('cors')
+
 
 //crear el servidor de express
 const app = express();
 
 //base de datos
 dbConection();
+
+app.use(cors())
 
 
 //Directorio publico, muestra el html del public
