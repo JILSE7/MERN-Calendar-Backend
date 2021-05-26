@@ -99,6 +99,8 @@ const revalidarToken = async(req, res = response) => {
     const token = await generarToken(uid,name)
     res.json({
         ok: true,
+        uid,
+        name,
         token
     })
 }
